@@ -320,14 +320,18 @@ def train_model_route():
 
 # Initialize the application
 if __name__ == '__main__':
-    # Try to load existing model, if not available, train a new one
+    print("🚀 Starting application...")
+
     if not load_model():
-        print("No pre-trained model found. Training new model...")
+        print("⚠️ No pre-trained model found. Training new model...")
         try:
             train_model()
-            print("Model training completed!")
+            print("✅ Model training completed!")
         except Exception as e:
-            print(f"Error training model: {e}")
-            print("The application will still run but predictions may not work without a dataset.")
-    
+            print(f"❌ Error training model: {e}")
+            print("⚠️ The application will still run but predictions may not work without a dataset.")
+    else:
+        print("✅ Model loaded successfully.")
+
     app.run(debug=True, host='0.0.0.0', port=5000)
+
