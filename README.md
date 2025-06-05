@@ -81,9 +81,7 @@ git push -u origin main
 ---
 
 ## 📄 Project Report
-
-📥 [Click to view report](https://github.com/Pushya04/sarcasm-detection-system/raw/main/docs/report.docx)
-
+📥 [Click to view report](https://github.com/Pushya04/sarcasm-detection-system/blob/main/report.docx)
 
 ---
 
