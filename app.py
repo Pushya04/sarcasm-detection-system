@@ -121,13 +121,13 @@ def train_model():
         'best_params': best_params,
         'best_score': best_score
     }
-
 def load_model():
     global model, vectorizer
     try:
-        with open('model.pkl', 'rb') as f:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        with open(os.path.join(base_dir, 'model.pkl'), 'rb') as f:
             model = pickle.load(f)
-        with open('vectorizer.pkl', 'rb') as f:
+        with open(os.path.join(base_dir, 'vectorizer.pkl'), 'rb') as f:
             vectorizer = pickle.load(f)
         return True
     except FileNotFoundError:
