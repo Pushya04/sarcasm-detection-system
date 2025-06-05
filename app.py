@@ -125,13 +125,26 @@ def load_model():
     global model, vectorizer
     try:
         base_dir = os.path.dirname(os.path.abspath(__file__))
-        with open(os.path.join(base_dir, 'model.pkl'), 'rb') as f:
+        model_path = os.path.join(base_dir, 'model.pkl')
+        vectorizer_path = os.path.join(base_dir, 'vectorizer.pkl')
+
+        print(f"Trying to load model from: {model_path}")
+        print(f"Trying to load vectorizer from: {vectorizer_path}")
+
+        with open(model_path, 'rb') as f:
             model = pickle.load(f)
-        with open(os.path.join(base_dir, 'vectorizer.pkl'), 'rb') as f:
+        with open(vectorizer_path, 'rb') as f:
             vectorizer = pickle.load(f)
+
+        print("✅ Model and vectorizer loaded successfully.")
         return True
-    except FileNotFoundError:
+    except FileNotFoundError as e:
+        print(f"❌ File not found: {e}")
         return False
+    except Exception as e:
+        print(f"❌ Unexpected error loading model: {e}")
+        return False
+
 
 def predict_sarcasm(text):
     global model, vectorizer
