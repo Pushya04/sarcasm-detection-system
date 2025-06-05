@@ -40,8 +40,8 @@ Try out the sarcasm detector live at:
 
 ### 1. Clone and Install
 ```bash
-git clone https://github.com/YOUR_USERNAME/sarcasm-detector.git
-cd sarcasm-detector
+git clone https://github.com/Pushya04/sarcasm-detection-system.git
+cd sarcasm-detection-system
 pip install -r requirements.txt
 ```
 
@@ -72,16 +72,18 @@ Visit: [http://localhost:5000](http://localhost:5000)
 git init
 git add .
 git commit -m "Initial commit: sarcasm detector"
-git remote add origin https://github.com/YOUR_USERNAME/sarcasm-detector.git
+git remote add origin https://github.com/Pushya04/sarcasm-detection-system.git
 git branch -M main
 git push -u origin main
+
 ```
 
 ---
 
 ## 📄 Project Report
 
-📥 [Click to view report](docs/report.docx)
+📥 [Click to view report](https://github.com/Pushya04/sarcasm-detection-system/raw/main/docs/report.docx)
+
 
 ---
 
